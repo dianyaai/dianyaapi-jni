@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Example</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="translate_input_label">输入要翻译的文本</string>
+    <string name="translate_input_hint">请输入文本</string>
+    <string name="translate_input_default">你好，世界！</string>
+    <string name="translate_language_label">目标语言</string>
+    <string name="translate_button">调用 nativeTranslateText</string>
+    <string name="translate_result_placeholder">等待调用结果......</string>
+    <string name="translate_result_success">状态：%1$s\n结果：%2$s</string>
+    <string name="translate_result_error">调用失败：%1$s</string>
+    <string name="translate_result_unavailable">JNI 库不可用：%1$s</string>
+    <string name="stream_section_label">实时转写测试</string>
+    <string name="stream_button_start">开始实时转写</string>
+    <string name="stream_button_stop">停止实时转写</string>
+    <string name="stream_result_placeholder">等待实时转写结果...</string>
+    <string name="stream_result_none">暂无实时转写结果</string>
+    <string name="stream_permission_denied">麦克风权限被拒绝，无法开始实时转写。</string>
+    <string name="stream_status_initializing">正在创建实时会话...</string>
+    <string name="stream_status_session_created">实时会话已创建：%1$s</string>
+    <string name="stream_status_started">实时转写已开始，正在上传音频...</string>
+    <string name="stream_status_stopping">正在停止实时转写...</string>
+    <string name="stream_status_stopped">实时转写已停止。</string>
+    <string name="stream_status_starting_shutdown">正在安全停止实时转写，请稍候…</string>
+    <string name="stream_status_closed">实时会话已关闭。</string>
+    <string name="stream_button_disabling">正在停止...</string>
+    <string name="stream_error_default_detail">未知错误</string>
+    <string name="stream_error_session">创建实时会话失败：%1$s</string>
+    <string name="stream_error_close_session">关闭实时会话失败：%1$s</string>
+    <string name="stream_error_audio">音频采集失败：%1$s</string>
+    <string name="stream_error_read">读取实时结果失败：%1$s</string>
+</resources>
