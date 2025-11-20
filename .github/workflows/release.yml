@@ -53,17 +53,6 @@ jobs:
           https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com
           EOF
 
-      - name: Configure git for Cargo [Windows/MSYS]
-        if: runner.os == 'Windows'
-        shell: msys2 {0}
-        run: |
-          set -euo pipefail
-          git config --global url."https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com/".insteadOf "https://github.com/"
-          git config --global credential.helper store
-          cat <<EOF > ~/.git-credentials
-          https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com
-          EOF
-
       - name: Install modern Bash (macOS)
         if: runner.os == 'macOS'
         run: |
@@ -102,6 +91,17 @@ jobs:
             base-devel
             zip
             unzip
+
+      - name: Configure git for Cargo [Windows/MSYS]
+        if: runner.os == 'Windows'
+        shell: msys2 {0}
+        run: |
+          set -euo pipefail
+          git config --global url."https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git config --global credential.helper store
+          cat <<EOF > ~/.git-credentials
+          https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com
+          EOF
 
       - name: Build SDK (desktop) [Unix]
         if: runner.os != 'Windows'
