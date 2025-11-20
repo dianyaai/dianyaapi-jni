@@ -81,7 +81,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' wrapper-jni/java/build.gradle.kts | head -n 1)
+          VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' java/build.gradle.kts | head -n 1)
           if [[ -z "${VERSION}" ]]; then
               echo "Unable to determine SDK version" >&2
               exit 1
@@ -125,7 +125,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "$GITHUB_WORKSPACE/artifacts"
-          cd "$GITHUB_WORKSPACE/wrapper-jni/dist"
+          cd "$GITHUB_WORKSPACE/dist"
           cp "dianyaapi-jni-${SDK_VERSION}.jar" "$GITHUB_WORKSPACE/artifacts/dianyaapi-jni-${SDK_VERSION}-${OS_TAG}.jar"
 
       - name: Prepare desktop artifact [Windows]
@@ -137,7 +137,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "$GITHUB_WORKSPACE/artifacts"
-          cd "$GITHUB_WORKSPACE/wrapper-jni/dist"
+          cd "$GITHUB_WORKSPACE/dist"
           cp "dianyaapi-jni-${SDK_VERSION}.jar" "$GITHUB_WORKSPACE/artifacts/dianyaapi-jni-${SDK_VERSION}-${OS_TAG}.jar"
 
       - name: Upload desktop JAR
@@ -179,7 +179,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' wrapper-jni/java/build.gradle.kts | head -n 1)
+          VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' java/build.gradle.kts | head -n 1)
           if [[ -z "${VERSION}" ]]; then
               echo "Unable to determine SDK version" >&2
               exit 1
@@ -211,7 +211,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p artifacts
-          cp "wrapper-jni/dist/dianyaapi-jni-${SDK_VERSION}.aar" "artifacts/dianyaapi-jni-${SDK_VERSION}-android.aar"
+          cp "dist/dianyaapi-jni-${SDK_VERSION}.aar" "artifacts/dianyaapi-jni-${SDK_VERSION}-android.aar"
 
       - name: Upload Android AAR
         uses: actions/upload-artifact@v4
