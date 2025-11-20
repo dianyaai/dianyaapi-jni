@@ -53,13 +53,16 @@ jobs:
           https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com
           EOF
 
-      - name: Configure git for Cargo [Windows]
+      - name: Configure git for Cargo [Windows/MSYS]
         if: runner.os == 'Windows'
-        shell: pwsh
+        shell: msys2 {0}
         run: |
+          set -euo pipefail
           git config --global url."https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com/".insteadOf "https://github.com/"
           git config --global credential.helper store
-          Set-Content -Path "$env:USERPROFILE\.git-credentials" -Value "https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com"
+          cat <<EOF > ~/.git-credentials
+          https://x-access-token:${{ secrets.DIANYA_TOKEN }}@github.com
+          EOF
 
       - name: Install modern Bash (macOS)
         if: runner.os == 'macOS'
