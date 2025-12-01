@@ -44,7 +44,7 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.gson)
     implementation(libs.jetbrains.annotations)
-    implementation(files(rootProject.file("../dist/dianyaapi-jni-0.2.0.aar")))
+    implementation(files(rootProject.file("../dist/dianyaapi-jni-0.2.1.aar")))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
